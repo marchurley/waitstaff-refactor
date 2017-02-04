@@ -1,0 +1,53 @@
+	
+		<!-- WRAPPER -->
+		<div class="mainWrapper" ng-controller="MealCtrl as vm">
+			
+			<!-- SECTION LEFT -->
+			<section class="mealDetailsWrapper">
+				<h2>Enter the Meal Details</h2>
+				
+				<!-- FORM -->
+				<form name="vm.userInputForm" novalidate ng-submit="vm.submit()">
+					<div class="inputWrapper">
+						<div class="halfWidth textL"><p>Base Meal Price: $</p></div>
+						<div class="halfWidth inputL"><input class="wide" type="number" name="price" ng-model="vm.mealPrice" required></div>
+						
+						<div class="halfWidth textL"><p>Tax Rate: %</p></div>
+						<div class="halfWidth inputL"><input class="short" type="number" name="rate" ng-model="vm.taxRate" required></div>
+						
+						<div class="halfWidth textL lastInputLine"><p>Tip Percentage: %</p></div>
+						<div class="halfWidth inputL lastInputLine"><input class="short" type="number" name="percentage" ng-model="vm.tipPercentage" required></div>
+					</div>
+					<div class="buttons">
+						<input class="button" type="submit" name="submit">
+						<button type="reset" ng-click="vm.cancel()">Cancel</button>
+					</div>
+				</form>
+				<div class="errorMessage" ng-show="vm.inputComplete">
+			       	<p class="errorText">Please enter a number in every field</p>
+			   	</div>
+			</section>
+
+			<!-- SECTION RIGHT TOP -->
+				<section class="customerChargesWrapper">
+					<h2>Customer Charges</h2>
+					<div class="outputWrapper">
+						<div class="halfWidth textR"><p>Subtotal </p></div>
+						<div class="halfWidth outputR"><p>{{vm.subTotal | number:2}}</p></div>
+						
+						<div class="halfWidth textR"><p>Tip </p></div>
+						<div class="halfWidth outputR"><p>{{vm.tipTotal | number:2}}</p></div>
+						<hr>
+
+						<div class="halfWidth textR"><p>Total </p></div>
+						<div class="halfWidth outputR"><p>{{vm.total | number:2}}</p></div>
+					</div>	
+			</section>
+
+			
+			
+		
+		</div>
+
+		
+

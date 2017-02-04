@@ -5,87 +5,26 @@
 		<!-- Meta Tags -->
 		<meta charset="utf-8"/>
 		
-		<!-- Stylesheets -->
+		<!-- Stylesheets 
 		<link rel="stylesheet" href="styles/reset.css">
 		<link rel="stylesheet" href="styles/style.css"/> 
+		-->
 		
 		<!-- Fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	</head>
 
-	<body ng-app="myApp" ng-controller="MyCtrl as vm">
+	<body ng-app="myApp">
 		<!-- TITLE -->
 		<h1>Waitstaff Caluclator</h1>
 		
-		<!-- WRAPPER -->
-		<div class="mainWrapper">
-			
-			<!-- SECTION LEFT -->
-			<section class="mealDetailsWrapper">
-				<h2>Enter the Meal Details</h2>
-				
-				<!-- FORM -->
-				<form name="vm.userInputForm" novalidate ng-submit="vm.submit()">
-					<div class="inputWrapper">
-						<div class="halfWidth textL"><p>Base Meal Price: $</p></div>
-						<div class="halfWidth inputL"><input class="wide" type="number" name="price" ng-model="vm.mealPrice" required></div>
-						
-						<div class="halfWidth textL"><p>Tax Rate: %</p></div>
-						<div class="halfWidth inputL"><input class="short" type="number" name="rate" ng-model="vm.taxRate" required></div>
-						
-						<div class="halfWidth textL lastInputLine"><p>Tip Percentage: %</p></div>
-						<div class="halfWidth inputL lastInputLine"><input class="short" type="number" name="percentage" ng-model="vm.tipPercentage" required></div>
-					</div>
-					<div class="buttons">
-						<input class="button" type="submit" name="submit">
-						<button type="reset" ng-click="vm.cancel()">Cancel</button>
-					</div>
-				</form>
-				<div class="errorMessage" ng-show="vm.inputComplete">
-			       	<p class="errorText">Please enter a number in every field</p>
-			   	</div>
-			</section>
-
-			
-			<!-- SECTION RIGHT -->
-			<div class="rightWrapper">
-				
-				<!-- SECTION RIGHT TOP -->
-				<section class="customerChargesWrapper">
-					<h2>Customer Charges</h2>
-					<div class="outputWrapper">
-						<div class="halfWidth textR"><p>Subtotal </p></div>
-						<div class="halfWidth outputR"><p>{{vm.subTotal | number:2}}</p></div>
-						
-						<div class="halfWidth textR"><p>Tip </p></div>
-						<div class="halfWidth outputR"><p>{{vm.tipTotal | number:2}}</p></div>
-						<hr>
-
-						<div class="halfWidth textR"><p>Total </p></div>
-						<div class="halfWidth outputR"><p>{{vm.total | number:2}}</p></div>
-					</div>	
-				</section>
-
-				<!-- SECTION RIGHT BOTTOM -->
-				<section class="myEarningsWrapper">
-					<h2>My Earnings Info</h2>
-					<div class="outputWrapper">
-						<div class="twoThirdWidth textR"><p>Tip Total: </p></div>
-						<div class="oneThirdWidth outputR"><p>{{vm.tipGrandTotal | number:2}}</p></div>
-						
-						<div class="twoThirdWidth textR"><p>Meal count: </p></div>
-						<div class="oneThirdWidth outputR"><p>{{vm.mealCount | number:2}}</p></div>
-
-						<div class="twoThirdWidth textR"><p>Average Tip Per Meal: </p></div>
-						<div class="oneThirdWidth outputR"><p>{{vm.averageTip | number:2}}</p></div>
-					</div>	
-				</section>
-
-			</div>
-
-			<button ng-click="vm.startOver()" class="reset">Reset</button>
+		<a href="#/">Home</a>
+    	<a href="#/new-meal">New Meal</a>
+    	<a href="#/my-earnings">My Earnings</a>
+    	<br>
+    	<br>
+    	<div ng-view>Test</div>
 		
-		</div>
 
 		
 		<!-- JavaScript -->
@@ -94,6 +33,7 @@
 		<script type="text/javascript" src="js/myApp.js"></script>
 		<!-- Load the angular-messages module and add in .js application as dependency -->
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-messages.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
 
 		
 	</body> 

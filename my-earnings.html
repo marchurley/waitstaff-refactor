@@ -1,0 +1,29 @@
+
+		
+		<!-- WRAPPER -->
+		<div class="mainWrapper" ng-controller="MealCtrl as vm">
+			
+		
+			<!-- SECTION RIGHT -->
+			<div class="rightWrapper">
+				
+				<!-- SECTION RIGHT BOTTOM -->
+				<section class="myEarningsWrapper">
+					<h2>My Earnings for This Shift</h2>
+					<div class="outputWrapper">
+						<div class="twoThirdWidth textR"><p>Tip Total: </p></div>
+						<div class="oneThirdWidth outputR"><p>{{vm.tipGrandTotal | number:2}}</p></div>
+						
+						<div class="twoThirdWidth textR"><p>Meal count: </p></div>
+						<div class="oneThirdWidth outputR"><p>{{vm.mealCount | number:2}}</p></div>
+
+						<div class="twoThirdWidth textR"><p>Average Tip Per Meal: </p></div>
+						<div class="oneThirdWidth outputR"><p>{{vm.averageTip | number:2}}</p></div>
+					</div>	
+				</section>
+
+			</div>
+
+			<button ng-click="vm.startOver()" class="reset">Reset</button>
+		
+		</div>
