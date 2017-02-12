@@ -16,7 +16,7 @@ angular.module('myApp', ['ngMessages', 'ngRoute'])
         })
         .when('/my-earnings', {
             templateUrl: './my-earnings.html',
-            controller: 'MealCtrl',
+            controller: 'EarningsCtrl',
             controllerAs: 'vm',
         })
         .otherwise('/');
@@ -26,9 +26,11 @@ angular.module('myApp', ['ngMessages', 'ngRoute'])
 
     }])
 
+    //$rootScope has to be injected in the function to work
     .controller('MealCtrl', function($rootScope) { 
 
-
+    this.tipGrandTotal = $rootScope.tipGrandTotal; 
+    console.log(this.tipGrandTotal);
 
         //Validate form and calculate Subtotal, Tip, Total, Meal Count & Average Tip per Meal
         this.submit = function(){
@@ -52,7 +54,7 @@ angular.module('myApp', ['ngMessages', 'ngRoute'])
   
                 this.mealCount ++;
 
-                this.tipGrandTotal = grandTotal + this.tipTotal;
+                $rootScope.tipGrandTotal = grandTotal + this.tipTotal;
 
                 grandTotal = this.tipGrandTotal;
 
