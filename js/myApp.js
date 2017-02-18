@@ -23,6 +23,7 @@ app.config(['$routeProvider', function($routeProvider) {
         .otherwise('/');
 }]);
 
+//run function to initiate the $rootScope values when the app is started
 app.run(function($rootScope) {
     $rootScope.tipGrandTotal = 0;
     $rootScope.mealCount = 0;
@@ -110,8 +111,13 @@ app.controller('EarningsCtrl', ['$rootScope', function($rootScope) {
     //Set this.mealCount with the value from the rootscope to be shown in the earnings view
     this.mealCount = $rootScope.mealCount;
 
-    //Starting over by setting all values back to 0, resetting inputs and error message
+    //Starting over by
+    //Setting this.values to zero inside the same view
+    //Setting $rootScope values to zero for the whole app
     this.startOver = function() {
+        this.tipGrandTotal = 0;
+        this.mealCount = 0;
+        this.averageTip = 0;
         $rootScope.tipGrandTotal = 0;
         $rootScope.mealCount = 0;
         $rootScope.averageTip = 0;
