@@ -38,16 +38,14 @@ app.controller('HomeCtrl', ['$rootScope', function($rootScope) {
 //$rootScope has to be injected in the function to work
 //calling controller function form angular.module. I am including this inside the app
 app.controller('MealCtrl', ['$rootScope', function($rootScope) {
+  this.subTotal = 0;
+  this.tipTotal = 0;
+  this.total = 0;
+  this.tipGrandTotal = 0;
+  this.averageTip = 0;
 
     //Validate form and calculate Subtotal, Tip, Total, Meal Count & Average Tip per Meal
     this.submit = function() {
-        //Set initial values to 0
-        this.subTotal = 0;
-        this.tipTotal = 0;
-        this.total = 0;
-        this.tipGrandTotal = 0;
-        this.averageTip = 0;
-
         //Check if form is valid and then calculate all values
         if (this.userInputForm.$valid) {
 

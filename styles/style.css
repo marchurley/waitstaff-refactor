@@ -1,214 +1,256 @@
 /*---------------------------------------------------------------------------------
    Common Styles
 ---------------------------------------------------------------------------------*/
+
+html {
+    width: 100%;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    height: 100%;
+    background-color: #F2F2F2;
+}
+
+h1 {
+    font-size: 5em;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+h2 {
+    border-bottom: 2px solid black;
+    font-size: 2em;
+    padding: 0.5em 0em 0.5em 1em;
+    text-align: center;
+}
+
+button, .button {
+    background-color: #590212;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    border: 0;
+    box-shadow: none;
+    border-radius: 0px
+}
+
+
+/*---------------------------------------------------------------------------------
+   TITLE
+---------------------------------------------------------------------------------*/
+
+.title {
+    padding-top: 3.5em;
+    height: 8em;
+    background-color: #8C1127;
+}
+
+.title h1 {
+    font-family: 'Inconsolata', monospace;
+    color: #F2F2F2;
+}
+
+
+/*---------------------------------------------------------------------------------
+   NAVBAR
+---------------------------------------------------------------------------------*/
+
+.navbar {
+    background-color: #0D0D0D;
+    height: 2em;
+    text-align: center;
+    padding-top: 1em;
+}
+
+.navbar a {
+    color: #F2F2F2;
+    text-transform: uppercase;
+    margin: 0.5em;
+    font-size: 1.2em;
+}
+
+
+/*---------------------------------------------------------------------------------
+   CONTENT
+---------------------------------------------------------------------------------*/
+
+.content {
+    width: 80%;
+    margin: 3em auto;
+}
+
+
+/*---------------------------------------------------------------------------------
+   HOME WRAPPER
+---------------------------------------------------------------------------------*/
+
+.homeWrapper {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.homeWrapper h4 {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.numberList {
+    line-height: 2em;
+    text-align: center;
+}
+
+.enjoy {
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 1.5em;
+}
+
+
+/*---------------------------------------------------------------------------------
+   NEW MEAL - Enter the Meal Details
+---------------------------------------------------------------------------------*/
+
+.inputWrapper, .outputWrapper {
+    margin-top: 1em;
+    font-size: 1.3em;
+}
+
+.mealDetailsWrapper {
+    background-color: #BF244E;
+		padding-bottom: 0.5em;
+}
+
+.halfWidth {
+    width: 44%;
+}
+
+.textL {
+    float: left;
+    text-align: right;
+    margin-top: 0.95em;
+}
+
+.inputL {
+    float: right;
+    text-align: left;
+    margin-top: 0.7em;
+}
+
+.short {
+    width: 3em;
+    height: 1.6em;
+}
+
+.wide {
+    width: 8em;
+    height: 1.6em;
+}
+
+.buttons {
+    text-align: center;
+    clear: both;
+    margin-bottom: 0.5em;
+}
+
+.lastInputLine {
+    margin-bottom: 1.5em;
+}
+
+.errorText {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    text-align: center;
+    font-style: italic;
+    color: #F2F2F2;
+    margin-top: 1em;
+}
 /*Colors
 dark red #590212
 middle red #8C1127
 poppy red #BF244E
 black #0D0D0D
 white #F2F2F2
+green #24BF38
 */
 
-
-html{
-	width: 100%;
-	height: 100%;
-	font-family: 'Open Sans', sans-serif;
-}
-
-body{
-	height: 100%;
-	background-color: #F2F2F2;
-}
-
-h1 {
-	font-size: 5em;
-	text-align: center;
-	margin-bottom: 1em;
-}
-
-h2 {
-	border-bottom: 2px solid black;
-	font-size: 2em;
-	padding: 0.5em 0em 0.5em 1em;
-}
-
-button, .button {
-    background-color: darkgrey;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    font-size: 16px;
-    cursor: pointer;
-    font-family: 'Open Sans', sans-serif;
-}
-
-
 /*---------------------------------------------------------------------------------
-   Main Wrappers
----------------------------------------------------------------------------------*/
-.title {
-	padding-top: 3.5em;
-	height: 8em;
-	background-color: #8C1127;
-}
-
-.title h1{
-	font-family: 'Inconsolata', monospace;
-	color: #F2F2F2;
-}
-
-
-.mainWrapper {
-	width: 100%;
-	height: 100%;
-}
-
-.mealDetailsWrapper,
-.customerChargesWrapper,
-.myEarningsWrapper {
-	border: 2px solid black;
-}
-
-.mealDetailsWrapper {
-	float: left;
-	width: 35%;
-	height: 50%;
-	margin-left: 10%;
-	min-width: 25em;
-}
-
-.rightWrapper {
-	float: right;
-	width: 35%;
-	height: 50%;
-	margin-right: 10%;
-	min-width: 25em;
-}
-
-.customerChargesWrapper,
-.myEarningsWrapper {
-	width: 99%;
-	height: 47%;
-}
+    NEW MEAL - Customer Charges
+ ---------------------------------------------------------------------------------*/
 
 .customerChargesWrapper {
-	margin-bottom: 8%;
+    height: 250px;
+		background-color: #24BF38;
 }
 
-.myEarningsWrapper {
-	clear: both;
+.halfWidth {
+    width: 48%;
 }
-
-.inputWrapper {
-	width: 100%;
-	margin-top: 2em;
-	font-size: 1.3em;
-}
-
-.outputWrapper {
-	width: 100%;
-	margin-top: 1em;
-	font-size: 1.3em;
-}
-
-.halfWidth{
-	width: 48%;
-}
-
-/*---------------------------------------------------------------------------------
-   Left Side
----------------------------------------------------------------------------------*/
-
-
-.textL {
-	float: left;
-	text-align: right;
-	margin-top: 0.95em;
-}
-
-.inputL {
-	float: right;
-	text-align: left;
-	margin-top: 0.7em;
-}
-
-.short {
-	width: 3em;
-	height: 1.6em;
-}
-
-.wide {
-	width: 8em;
-	height: 1.6em;
-}
-
-.buttons {
-	text-align: center;
-	clear: both;
-}
-
-.lastInputLine {
-	margin-bottom: 4em;
-}
-
-.errorText {
-	font-family: 'Open Sans', sans-serif;
-	font-size: 1em;
-	text-align: center;
-	font-style: italic;
-	color: red;
-	margin-top: 1em;
-}
-
-
-/*---------------------------------------------------------------------------------
-   Right Side Top
----------------------------------------------------------------------------------*/
 
 .textR {
-	float: left;
-	text-align: right;
-	margin-top: 0.8em;
+    float: left;
+    text-align: right;
+    margin-top: 0.8em;
+}
+
+.textR p {
+    padding-right: 0.5em;
 }
 
 .outputR {
-	float: right;
-	text-align: right;
-	margin-top: 0.8em;
+    float: right;
+    text-align: right;
+    margin-top: 0.8em;
 }
 
 .outputR p {
-	width: 40%;
+    width: 20%;
 }
 
 hr {
-	width: 55%;
-	margin-left: 25%;
-	margin-bottom: -1em;
+    width: 55%;
+    margin-left: 25%;
+    margin-bottom: -1em;
+		border-color: black;
 }
 
-/*---------------------------------------------------------------------------------
-   Right Side Bottom
----------------------------------------------------------------------------------*/
 
+/*---------------------------------------------------------------------------------
+    MY EARNINGS
+ ---------------------------------------------------------------------------------*/
+
+.myEarningsWrapper {
+    clear: both;
+		height: 300px;
+		background-color: #24BF38;
+}
+
+.myEarningsWrapper h2 {
+	background-color: #BF244E;
+}
 .oneThirdWidth {
-	width: 38%;
+    width: 38%;
 }
 
 .twoThirdWidth {
-	width: 60%;
+    width: 60%;
 }
+
 
 /*---------------------------------------------------------------------------------
    Reset
 ---------------------------------------------------------------------------------*/
 
 .reset {
-	float: right;
-	clear: both;
-	margin-top: 2em;
-	margin-right: 2em;
+    float: right;
+    clear: both;
+    margin-top: 2em;
+    margin-right: 2em;
 }
 
 
@@ -217,12 +259,8 @@ hr {
 ---------------------------------------------------------------------------------*/
 
 @media screen and (max-width: 1030px) {
-	.rightWrapper,
-	.mealDetailsWrapper,
-	.customerChargesWrapper,
-	.myEarningsWrapper {
-		margin: 0 auto;
-		width: 100%;
-	}
-
+    .rightWrapper, .mealDetailsWrapper, .customerChargesWrapper, .myEarningsWrapper {
+        margin: 0 auto;
+        width: 100%;
+    }
 }

@@ -1,46 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Waiter Earnings Calculator</title>
-		<!-- Meta Tags -->
-		<meta charset="utf-8"/>
+
+<head>
+	<title>Waiter Earnings Calculator</title>
+	<!-- Meta Tags -->
+	<meta charset="utf-8" />
 
 
-		<link rel="stylesheet" href="styles/reset.css">
-		<link rel="stylesheet" href="styles/style.css"/>
+	<link rel="stylesheet" href="styles/reset.css">
+	<link rel="stylesheet" href="styles/style.css" />
 
 
-		<!-- Fonts -->
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
-	</head>
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+</head>
 
-	<body ng-app="myApp">
-		<!-- TITLE -->
-		<section class="title">
-			<h1>Waitstaff Caluclator</h1>
-		</section>
+<body ng-app="myApp">
+	<!-- TITLE -->
+	<section class="title">
+		<h1>Waitstaff Caluclator</h1>
+	</section>
 
-
-
+	<!-- NAVBAR -->
+	<section class="navbar">
 		<a href="#/">Home</a>
-    	<a href="#/new-meal">New Meal</a>
-    	<a href="#/my-earnings">My Earnings</a>
-    	<br>
-    	<br>
-    	<div ng-view>Test</div>
+		<a href="#/new-meal">New Meal</a>
+		<a href="#/my-earnings">My Earnings</a>
+	</section>
+
+	<!-- CONTENT -->
+	<section class="content">
+		<div ng-view>Test</div>
+	</section>
+
+	<!-- JavaScript -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script type="text/javascript" src="js/myApp.js"></script>
+	<!-- Load the angular-messages module and add in .js application as dependency -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-messages.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+	<script scr="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
+
+	</script>
 
 
 
-		<!-- JavaScript -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-		<script type="text/javascript" src="js/myApp.js"></script>
-		<!-- Load the angular-messages module and add in .js application as dependency -->
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-messages.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
-
-
-	</body>
+</body>
 
 </html>
