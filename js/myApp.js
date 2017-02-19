@@ -1,4 +1,4 @@
-var app = angular.module('myApp', ['ngMessages', 'ngRoute']);
+var app = angular.module('myApp', ['ngMessages', 'ngRoute', 'ngAnimate']);
 //Value block for defining links
 
 app.value('acceptedLinks', ['Home', 'New Meal', 'My Earnings']);
@@ -24,10 +24,21 @@ app.config(['$routeProvider', function($routeProvider) {
 }]);
 
 //run function to initiate the $rootScope values when the app is started
-app.run(function($rootScope) {
+app.run(function($rootScope, $timeout) {
     $rootScope.tipGrandTotal = 0;
     $rootScope.mealCount = 0;
     $rootScope.averageTip = 0;
+    // When route Change Starts, set isLoading variable to true
+    $rootScope.$on('$routeChangeStart', function() {
+        $rootScope.isLoading = true;
+    });
+    // When route Change successful, wait half a second and then set isLoading variable to false
+    $rootScope.$on('$routeChangeSuccess', function() {
+        //timout function is only needed to simulate a request to the server with a delay. Otherwise you would never see the effect
+        $timeout(function() {
+            $rootScope.isLoading = false;
+        }, 500);
+    });
 });
 //homectr = name of controller, then an array with 1 dependencies and 1 function which is the constructor for the controller where I inject that dependency again
 //is needed if you minify the code
@@ -38,11 +49,12 @@ app.controller('HomeCtrl', ['$rootScope', function($rootScope) {
 //$rootScope has to be injected in the function to work
 //calling controller function form angular.module. I am including this inside the app
 app.controller('MealCtrl', ['$rootScope', function($rootScope) {
-  this.subTotal = 0;
-  this.tipTotal = 0;
-  this.total = 0;
-  this.tipGrandTotal = 0;
-  this.averageTip = 0;
+    this.subTotal = 0;
+    this.tipTotal = 0;
+    this.total = 0;
+    this.tipGrandTotal = 0;
+    this.averageTip = 0;
+    this.mealSubmit = false;
 
     //Validate form and calculate Subtotal, Tip, Total, Meal Count & Average Tip per Meal
     this.submit = function() {
@@ -51,6 +63,9 @@ app.controller('MealCtrl', ['$rootScope', function($rootScope) {
 
             //hide error message
             this.inputComplete = false;
+
+            //show customerChargesWrapper
+            this.mealSubmit = true;
 
             //CALCULATE CUSTOMER CHARGES//
             //Calculate subtotal of one order based on mealprice & tax rate
@@ -99,7 +114,6 @@ app.controller('MealCtrl', ['$rootScope', function($rootScope) {
 
 //$rootScope has to be injected in the function to work
 app.controller('EarningsCtrl', ['$rootScope', function($rootScope) {
-
     //Set this.tipGrandTotal with the value from the rootscope to be shown in the earnings view
     this.tipGrandTotal = $rootScope.tipGrandTotal;
 

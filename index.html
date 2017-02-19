@@ -16,7 +16,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
 </head>
 
-<body ng-app="myApp">
+<body ng-app="myApp" ng-class="{loading: isLoading}">
 	<!-- TITLE -->
 	<section class="title">
 		<h1>Waitstaff Caluclator</h1>
@@ -29,9 +29,10 @@
 		<a href="#/my-earnings">My Earnings</a>
 	</section>
 
+
 	<!-- CONTENT -->
 	<section class="content">
-		<div ng-view>Test</div>
+		<div ng-view class="animate-view"></div>
 	</section>
 
 	<!-- JavaScript -->
@@ -41,7 +42,7 @@
 	<!-- Load the angular-messages module and add in .js application as dependency -->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-messages.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
-	<script scr="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
 
 	</script>
 
