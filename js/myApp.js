@@ -55,6 +55,7 @@ app.controller('MealCtrl', ['$rootScope', function($rootScope) {
     this.tipGrandTotal = 0;
     this.averageTip = 0;
     this.mealSubmit = false;
+    console.log(this.mealSubmit);
 
     //Validate form and calculate Subtotal, Tip, Total, Meal Count & Average Tip per Meal
     this.submit = function() {
@@ -66,6 +67,7 @@ app.controller('MealCtrl', ['$rootScope', function($rootScope) {
 
             //show customerChargesWrapper
             this.mealSubmit = true;
+            console.log(this.mealSubmit);
 
             //CALCULATE CUSTOMER CHARGES//
             //Calculate subtotal of one order based on mealprice & tax rate
